@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> FEND P5 </title>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+       
+           
+    <div id="map"></div>
+        
+   
+        
+    
+    <input id="s-input" class="controls" type="search" data-bind="textInput: query, valueUpdate: 'keyup'" placeholder="Search">
+    <div id="listbx">
+        <h2>Sites</h2>
+        <div>
+            <ul data-bind="foreach: search()">
+                <li data-bind="text: name, click: $parent.onPlaceClick"></li>
+            </ul>
+        </div>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js">
+    </script>
+    <script src="index.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGU8ZlktmvOi2zRRdjVHoHK20X26D6pTw&callback=initMap">
+    </script>
+</body>
+</html>
